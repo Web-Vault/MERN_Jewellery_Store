@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add these custom animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: -50% 0;
+  }
+  100% {
+    background-position: 150% 0;
+  }
+}
+
+@keyframes spin-in {
+  from {
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-once {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Create animation utility classes */
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-shine {
+    animation: shine 2s linear infinite;
+  }
+
+  .animate-spin-in {
+    animation: spin-in 0.3s ease-out;
+  }
+
+  .animate-pulse-once {
+    animation: pulse-once 0.5s ease-in-out;
+  }
+
+  /* For the shimmer effect */
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+    background-size: 250% 250%;
+  }
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.clip-path-signup {
+  clip-path: polygon(0 0, 100% 0, 0 100%, 0 30%);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.group:hover .progress-bar {
+  animation: progress 1s ease-in-out forwards;
+  animation-delay: 200ms;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap");
+
+.font-serif {
+  font-family: "Playfair Display", serif;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth transitions */
+.order-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #faf6f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e0d6cc;
+  border-radius: 4px;
+}
+
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .group-hover\:scale-105 {
+  transform: scale(1.05);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.avatar-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Add to your global CSS */
+* {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover\:shadow-glow {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hover\:shadow-glow {
+    transition: box-shadow 0.3s ease-in-out;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  80% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation: float 8s infinite linear;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin-in {
+  animation: spin-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes spin-in {
+  from {
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+nav {
+  transition-property: width, top, left, transform, border-radius, box-shadow,
+    background;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.mobile-menu-transition {
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Add this to your global CSS */
+html {
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
